@@ -1,6 +1,7 @@
 #include "framework/World.h"
 #include "framework/Core.h"
 #include "framework/Actor.h"
+#include "framework/Application.h"
 
 namespace ly
 {
@@ -65,14 +66,19 @@ namespace ly
 
     }
 
+    sf::Vector2u World::GetWindowSize() const
+    {
+        return mOwningApp->GetWindowSize();
+    };
+
     void World::BeginPlay()
     {
-        LOG("began play");
+
     }
 
     void World::Tick(float deltaTime)
     {
-        LOG("Tick at frame rate %f", 1.f / deltaTime);
+
     }
 }
 
